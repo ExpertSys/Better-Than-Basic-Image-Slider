@@ -7,17 +7,13 @@ let dots = document.getElementsByClassName("slide-inactive");
 let currentSlide = (n) => showSlides(slideIndex = n);
 
 let showSlides = () => {
-    
     let slides = document.getElementsByClassName("mySlides");
-
     if (slideIndex > slides.length){
         slideIndex = 1;
     }
-
     [...slides].forEach((slide) => {
         slide.style.display = "none"
     })
-
     for (i = 0; i < dots.length; i++) {
         reAssign();
     }
@@ -27,7 +23,6 @@ let showSlides = () => {
 
 let slideAutomatic = () => {
     let slides = document.getElementsByClassName("mySlides");
-
     [...slides].forEach((slide) => {
         slide.style.display = "none"
       })
@@ -35,7 +30,6 @@ let slideAutomatic = () => {
         reAssign();
     }
     slideIndex += 1;
-
     if (slideIndex > slides.length){
         slideIndex = 1;
     }
